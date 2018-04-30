@@ -1,0 +1,13 @@
+<p>Bienvenue sur la page de création de gossips !</p>
+
+<form action="/new" method="post">
+
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    Ton nom d'utilisateur:</br>
+    <input type="text" name="anonymous_author"></br>
+    Quelques mots à propos de toi:</br>
+    <textarea name="content"></textarea></br>
+    <input type="submit" value="Create">
+
+</form>
+
