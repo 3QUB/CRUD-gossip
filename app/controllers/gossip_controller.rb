@@ -26,5 +26,9 @@ class GossipController < ApplicationController
   end
 
   def destroy 
+    @gossip = Gossip.find(params[:id])
+    @gossip.destroy
+  
+    redirect_to gossip_path(@gossip), notice: "Delete success"
   end
 end
