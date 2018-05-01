@@ -32,9 +32,9 @@
       <tr>
         <td><%= comment.anonymous_author %></td>
         <td><%= comment.body %></td>
-        <td><%= link_to "Modifier", comment_path(comment.id) %></td>
+        <td><%= link_to "Modifier", edit_comment_path(comment.id) %></td>
         <td>  <%= link_to 'Delete', 
-                edit_comment_path(comment.id), 
+                   comment_path(comment.id), 
                             method: :delete, 
                             data: { confirm: 'Are you sure?' } %> </td>
       </tr>
