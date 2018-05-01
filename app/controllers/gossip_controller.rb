@@ -21,6 +21,8 @@ class GossipController < ApplicationController
     @gossip = Gossip.find(params[:id])
     permitted_columns = params.require(:gossip).permit(:anonymous_author, :content)
     @gossip.update_attributes(permitted_columns)
+
+    redirect_to gossip_path(@gossip)
   end
 
   def destroy 
