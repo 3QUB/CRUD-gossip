@@ -1,17 +1,21 @@
 <h1> Vous pouvez éditer votre gossip sur cette page</h1>
 
-<%= form_for @gossip do |f| %>
+<%= form_for @gossip do |gossip| %>
   <p>
-    <%= f.label :anonymous_author %><br>
-    <%= f.text_field :anonymous_author %>
+    <%= gossip.label :anonymous_author %><br>
+    <%= gossip.text_field :anonymous_author %>
   </p>
 
   <p>
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
+    <%= gossip.label :content %><br>
+    <%= gossip.text_area :content %>
   </p>
 
   <p>
-    <%= f.submit %>
+    <%= gossip.submit %>
   </p>
+  <%= link_to 'Delete', 
+                gossip_path(gossip), 
+                            method: :delete, 
+                            data: { confirm: 'Are you sure?' } %> 
 <% end %>
