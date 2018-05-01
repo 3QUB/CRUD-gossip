@@ -13,7 +13,7 @@
       <tr>
         <td><%= gossip.anonymous_author %></td>
         <td><%= gossip.content %></td>
-        <td><%= link_to "Voir les commentaires", gossip_path(@gossip) %></td>
+        <td><%= link_to "Voir les commentaires", gossip_path(gossip.id) %></td>
       </tr>
     <% end %>
     </tbody>
