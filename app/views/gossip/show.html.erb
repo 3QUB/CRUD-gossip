@@ -3,3 +3,17 @@
 <p><%= @gossip.content %></p>
 
 <%= link_to "Éditer", edit_gossip_path(@gossip), class: "btn btn-lg btn-primary" %>
+
+<h2>Laisser un commentaire </h2>
+<form action="/comment" method="post">
+
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="gossip-id" value="<%= @gossip.id %>">
+    Ton nom d'utilisateur:</br>
+    <input type="text" name="anonymous_author"></br>
+    Ton commentaire</br>
+    <textarea name="body"></textarea></br>
+    <input type="submit" value="Comment">
+
+</form>
+
