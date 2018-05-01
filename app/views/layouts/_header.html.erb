@@ -1,11 +1,15 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Accueil",   '/' %></li>
-        <li><%= link_to "Index des gossips", gossip_index_path %></li>
-        <li><%= link_to "Nouveau gossip", new_gossip_path %></li>
-      </ul>
-    </nav>
+
+<header>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Gossip Project</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><%= link_to "Accueil",   '/' %></li>
+      <li><%= link_to "Index des gossips", gossip_index_path %></li>
+      <li><%= link_to "Nouveau gossip", new_gossip_path %></li>
+    </ul>
   </div>
+</nav>
 </header>
