@@ -35,6 +35,6 @@ class GossipController < ApplicationController
 
   def index
     @gossip = Gossip.find(params[:id])
-    @get_gossip = Gossip.all
+    @getgossip = Gossip.all
   end
 end
