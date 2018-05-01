@@ -30,7 +30,7 @@ class GossipController < ApplicationController
     @gossip = Gossip.find(params[:id])
     @gossip.destroy
   
-    redirect_to gossip_path(@gossip), notice: "Delete success"
+    redirect_to gossip_index_path, notice: "Delete success"
   end
 
   def index

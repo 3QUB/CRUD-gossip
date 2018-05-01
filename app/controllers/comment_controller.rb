@@ -30,7 +30,7 @@ class CommentController < ApplicationController
     @comment = Comment.find(params[:id])
     @comment.destroy
   
-    redirect_to gossip_path(@gossip.gossip_id), notice: "Delete success"
+    redirect_to gossip_path(@comment.gossip_id), notice: "Delete success"
   end
 
 end
