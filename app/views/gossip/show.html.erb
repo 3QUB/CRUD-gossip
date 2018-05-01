@@ -34,7 +34,7 @@
         <td><%= comment.body %></td>
         <td><%= link_to "Modifier", comment_path(comment.id) %></td>
         <td>  <%= link_to 'Delete', 
-                comment_path(comment.id), 
+                edit_comment_path(comment.id), 
                             method: :delete, 
                             data: { confirm: 'Are you sure?' } %> </td>
       </tr>
