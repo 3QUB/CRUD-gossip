@@ -1,0 +1,20 @@
+<h1>Liste des Gossips</h1>
+
+<div class="container table-responsive">            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Author</th>
+        <th>Gossip</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @gossip.each do |gossip| %>
+      <tr>
+        <td><%= gossip.anonymous_author %></td>
+        <td><%= gossip.content %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

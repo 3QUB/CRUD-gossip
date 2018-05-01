@@ -1,4 +1,5 @@
 class GossipController < ApplicationController
+
   def new
     @gossip = Gossip.new
   end
@@ -30,5 +31,9 @@ class GossipController < ApplicationController
     @gossip.destroy
   
     redirect_to gossip_path(@gossip), notice: "Delete success"
+  end
+
+  def index
+    @gossip = Gossip.all
   end
 end
