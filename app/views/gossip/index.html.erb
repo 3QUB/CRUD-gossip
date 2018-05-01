@@ -6,6 +6,7 @@
       <tr>
         <th>Author</th>
         <th>Gossip</th>
+        <th># Comments</th>
       </tr>
     </thead>
     <tbody>
@@ -13,6 +14,7 @@
       <tr>
         <td><%= gossip.anonymous_author %></td>
         <td><%= gossip.content %></td>
+        <td><%= gossip.comments.count %></td>
         <td><%= link_to "Voir les commentaires", gossip_path(gossip.id) %></td>
       </tr>
     <% end %>
