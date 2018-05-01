@@ -1,0 +1,21 @@
+<h1> Vous pouvez éditer votre commentaire sur cette page</h1>
+
+<%= form_for @comment do |comment| %>
+  <p>
+    <%= comment.label :anonymous_author %><br>
+    <%= comment.text_field :anonymous_author %>
+  </p>
+
+  <p>
+    <%= comment.label :body %><br>
+    <%= comment.text_area :body %>
+  </p>
+
+  <p>
+    <%= comment.submit %>
+  </p>
+  <%= link_to 'Delete', 
+                comment_path(comment), 
+                            method: :delete, 
+                            data: { confirm: 'Are you sure?' } %> 
+<% end %>
