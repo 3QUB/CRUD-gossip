@@ -13,7 +13,14 @@ class GossipController < ApplicationController
     @gossip = Gossip.find(params[:id])
   end
 
+  def edit
+    @gossip = Gossip.find(params[:id])
+  end
+
   def update
+    @gossip = Gossip.find(params[:id])
+    permitted_columns = params.require(:gossip).permit(:anonymous_author, :content)
+    @gossip.update_attributes(permitted_columns)
   end
 
   def destroy 
