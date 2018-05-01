@@ -14,8 +14,8 @@
   <p>
     <%= gossip.submit %>
   </p>
+  <% end %>
   <%= link_to 'Delete', 
-                gossip_path(gossip.id), 
+                gossip_path(@gossip.id), 
                             method: :delete, 
                             data: { confirm: 'Are you sure?' } %> 
-<% end %>
