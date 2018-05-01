@@ -3,8 +3,8 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Accueil",   '/' %></li>
-        <li><%= link_to "Index des gossips",   '#' %></li>
-        <li><%= link_to "Nouveau gossip", '/gossip/new' %></li>
+        <li><%= link_to "Index des gossips",   redirect_to gossip_index_path %></li>
+        <li><%= link_to "Nouveau gossip", redirect_to new_gossip_path %></li>
       </ul>
     </nav>
   </div>
