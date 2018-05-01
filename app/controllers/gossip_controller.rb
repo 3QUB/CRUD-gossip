@@ -29,7 +29,7 @@ class GossipController < ApplicationController
   def destroy 
     @gossip = Gossip.find(params[:id])
     @gossip_comments = @gossip.comments
-    @gossip_comments.destroy
+    @gossip_comments.destroy_all
     @gossip.destroy
   
     redirect_to gossip_index_path, notice: "Delete success"
