@@ -17,3 +17,23 @@
 
 </form>
 
+<h2>Les commentaires de ce gossip</h2>
+
+<div class="container table-responsive">            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Author</th>
+        <th>Gossip</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% (@gossip.comments).each do |comment| %>
+      <tr>
+        <td><%= comment.anonymous_author %></td>
+        <td><%= comment.body %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
